@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #000000; /* fondo negro general */
+    color: #fff;
+}
+
+/* Header */
+header {
+    background: #000000;
+    padding: 20px;
+    border-bottom: 3px solid #dc3545;
+    position: relative; /* necesario para posicionar redes */
+    text-align: center; /* centra el logo */
+}
+
+/* Logo centrado */
+header .logo img {
+    height: 130px;
+    width: auto;
+    max-width: 280px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Redes sociales arriba a la derecha */
+header .redes {
+    position: absolute;
+    top: 50%; /* alineado verticalmente al centro */
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 15px;
+}
+
+header .redes a {
+    color: #fff;
+    font-size: 28px;
+    transition: 0.3s;
+}
+
+header .redes a:hover {
+    color: #dc3545;
+}
+
+/* Contenedor del botón PEDIDO debajo */
+.pedido-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Botón PEDIDO */
+.pedido-container .subtitulo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: #dc3545;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.pedido-container .subtitulo:hover {
+    background: #b02a37;
+}
+
+/* Catálogo */
+section#catalogo {
+    padding: 20px;
+}
+
+table {
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #fff;  /* tabla en blanco */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* Encabezados */
+th {
+    background: #dc3545;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 12px;
+    font-size: 14px;
+}
+
+/* Filas */
+td {
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333; /* texto oscuro porque la tabla es blanca */
+}
+
+/* Filas pares */
+tr:nth-child(even) {
+    background: #d4edda;
+}
+
+/* Hover */
+tr:hover {
+    background: #28a745;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Botón WhatsApp flotante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    background: #20b955;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid #dc3545;
+    font-size: 14px;
+}
+
+footer a {
+    color: #dc3545;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .aviso {
+    font-size: 16px;        /* más grande */
+    color: #ffcc00;         /* amarillo fuerte */
+    font-weight: bold;      /* en negrita */
+    text-transform: uppercase; /* mayúsculas */
+    margin-bottom: 15px;
+    line-height: 1.6;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}

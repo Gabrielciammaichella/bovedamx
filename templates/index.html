@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Encabezado -->
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo1.jpeg') }}" alt="logo1">
+        </div>
+        <div class="redes">
+            <a href="https://www.facebook.com/profile.php?id=61579833297856" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/bovedamex?igsh=MTlzZXR4b2prZWJlMw==" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</header>
+
+
+<!-- Botón Pedido centrado debajo -->
+<div class="pedido-container">
+    <a href="https://wa.me/5491135683850?text=Hola, quiero hacer un pedido" 
+       target="_blank" class="subtitulo">
+       ¡MÁS TARJETAS AQUÍ!
+    </a>
+</div>
+
+    <!-- Catálogo -->
+    <section id="catalogo">
+        <table>
+            <thead>
+                <tr>
+                    <th>Base</th>
+                    <th>BIN</th>
+                    <th>Exp Date</th>
+                    <th>Seller</th>
+                    <th>Bank</th>
+                    <th>Price</th>
+                    <th>Level</th>
+                    <th>Class</th>
+                    <th>Type</th>
+                    <th>País</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in productos %}
+                <tr onclick="window.open('https://wa.me/5491135683850?text=Hola, me interesa el producto con BIN {{ p.bin }} ({{ p.bank }})', '_blank')">
+                    <td>{{ p.base }}</td>
+                    <td>{{ p.bin }}</td>
+                    <td>{{ p.exp_date }}</td>
+                    <td>{{ p.seller }}</td>
+                    <td>{{ p.bank }}</td>
+                    <td>{{ p.price }}</td>
+                    <td>{{ p.level }}</td>
+                    <td>{{ p.class }}</td>
+                    <td>{{ p.type }}</td>
+                    <td>{{ p.country }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Botón de WhatsApp flotante -->
+    <a href="https://wa.me/5491135683850" target="_blank" class="whatsapp-float">
+        💬
+    </a>
+
+    <!-- Footer -->
+    <footer>
+    <p class="aviso">
+        TODAS estas tarjetas son una pequeña muestra del total de nuestro material en posesión. 
+        Para más información en cuanto la disponibilidad en tiempo real comunicarse a nuestro Whatsapp.
+    </p>
+    <p>© 2025 - Todos los derechos reservados</p>
+    <p>Contacto: <a href="mailto:bovedamx@gmail.com">bovedamx@gmail.com</a></p>
+</footer>
+
+</body>
+</html>
