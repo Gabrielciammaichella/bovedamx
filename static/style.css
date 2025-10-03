@@ -16,7 +16,7 @@ header {
 
 /* Logo centrado */
 header .logo img {
-    height: 130px;
+    height: 150px;
     width: auto;
     max-width: 280px;
     object-fit: contain;
@@ -28,7 +28,7 @@ header .logo img {
 header .redes {
     position: absolute;
     top: 50%; /* alineado verticalmente al centro */
-    right: 20px;
+    right: 50px;
     transform: translateY(-50%);
     display: flex;
     gap: 15px;
@@ -36,7 +36,7 @@ header .redes {
 
 header .redes a {
     color: #fff;
-    font-size: 28px;
+    font-size: 60px;
     transition: 0.3s;
 }
 
