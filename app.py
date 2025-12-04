@@ -42,7 +42,7 @@ productos = [
      "bank": "Banco Provincia de Buenos Aires", "price": "Consult", "level": "CLASSIC", 
      "class": "Debit", "type": "VISA", "country": "AR"},
 
-    {"base": "OBSCURE [02-10]", "bin": "525562", "exp_date": "04/27", "seller": 7, 
+    {"base": "OBSCURE [02-10]", "bin": "525562", "exp_date": "04/27", "seller": 9, 
      "bank": "Global Processing S.A.", "price": "Consult", "level": "PREPAID", 
      "class": "Debit", "type": "MASTERCARD", "country": "AR"},
 
@@ -50,7 +50,7 @@ productos = [
      "bank": "Mercadolibre S.R.L.", "price": "Consult", "level": "PREPAID", 
      "class": "Debit", "type": "MASTERCARD", "country": "AR"},
 
-    {"base": "OBSCURE [02-10]", "bin": "525855", "exp_date": "09/28", "seller": 7, 
+    {"base": "OBSCURE [02-10]", "bin": "525855", "exp_date": "09/28", "seller": 6, 
      "bank": "Bancar Tecnología S.A.", "price": "Consult", "level": "PREPAID", 
      "class": "Debit", "type": "MASTERCARD", "country": "AR"},
 
