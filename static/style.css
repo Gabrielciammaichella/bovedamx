@@ -44,29 +44,51 @@ header .redes a:hover {
     color: #dc3545;
 }
 
-/* Contenedor del botón PEDIDO debajo */
+/* Contenedor del botón */
 .pedido-container {
-    text-align: center;
-    margin: 20px 0;
+    text-align: right; /* botón a la derecha */
+    margin: 20px 30px;
 }
 
-/* Botón PEDIDO */
+/* BOTÓN estilizado (sin animación constante) */
 .pedido-container .subtitulo {
-    font-size: 20px;
+    font-size: 16px;           /* MÁS CHICO */
     font-weight: bold;
     color: #fff;
-    background: #dc3545;
-    padding: 10px 20px;
-    border-radius: 8px;
-    display: inline-block;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    background: linear-gradient(90deg, #dc3545, #ff4f4f);
+    padding: 8px 18px;          /* MÁS CHICO */
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;                   /* icono más cerca */
     text-decoration: none;
-    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(255,0,0,0.35);
+    transition: 0.25s ease-in-out;   /* mantiene hover suave */
+    /* animation removida */
 }
 
-.pedido-container .subtitulo:hover {
-    background: #b02a37;
+/* Icono dentro del botón */
+.pedido-container .subtitulo::before {
+    content: "💳"; 
+    font-size: 20px;   /* un poco más chico */
 }
+
+/* Hover */
+.pedido-container .subtitulo:hover {
+    background: linear-gradient(90deg, #b02a37, #e03a3a);
+    transform: translateY(-2px) scale(1.05); /* efecto elegante al pasar mouse */
+    box-shadow: 0 6px 14px rgba(255,0,0,0.45);
+}
+
+/* Mobile: mantener a la derecha */
+@media (max-width: 600px) {
+    .pedido-container {
+        text-align: right;
+        margin-right: 15px;
+    }
+}
+
+
 
 /* Catálogo */
 section#catalogo {
