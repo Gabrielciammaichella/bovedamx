@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 
-{% block contenido %}
+{% block content %}
 
-<!-- Aquí dejás solo la tabla del catálogo -->
 <section id="catalogo">
     <table>
         <thead>
@@ -37,7 +36,6 @@
         </tbody>
     </table>
 
-    <!-- PAGINACIÓN -->
     <div class="paginacion">
         {% if pagina_actual > 1 %}
             <a class="pagina-btn" href="/?pagina={{ pagina_actual - 1 }}">« Anterior</a>
