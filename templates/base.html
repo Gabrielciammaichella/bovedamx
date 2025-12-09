@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BóvedaMX</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logazo1.jpeg') }}" alt="logo">
+        </div>
+
+        <div class="redes">
+            <a href="https://www.facebook.com/profile.php?id=61579833297856" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/bovedamex" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- BOTONES DEL MENÚ -->
+<div class="menu-links">
+    <a class="menu-btn" href="/categorias">CATEGORÍAS E INFORMACIÓN</a>
+    <a class="menu-btn" href="/gratis">GRATIS</a>
+    <a class="pedido-btn"
+       href="https://wa.me/5491115683850?text=Hola, quiero hacer un pedido"
+       target="_blank">💳 ¡MÁS TARJETAS AQUÍ!</a>
+</div>
+
+<!-- BANNERS -->
+<div class="banner-container">
+    <img src="{{ url_for('static', filename='img/baner1.gif') }}" class="banner">
+    <img src="{{ url_for('static', filename='img/baner2.gif') }}" class="banner">
+</div>
+
+<!-- 🔥 CONTENIDO INDIVIDUAL DE CADA PÁGINA -->
+<div class="contenido">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p class="aviso">
+        Todas estas tarjetas son una pequeña muestra del total disponible.
+        Contacte por WhatsApp para disponibilidad en tiempo real.
+    </p>
+    <p>© 2025 - Todos los derechos reservados</p>
+    <p>Contacto: <a href="mailto:bovedamx@gmail.com">bovedamx@gmail.com</a></p>
+</footer>
+
+</body>
+</html>

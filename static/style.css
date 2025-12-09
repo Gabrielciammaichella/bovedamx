@@ -1,20 +1,20 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background: #000000; /* fondo negro general */
+    background: #000000;
     color: #fff;
 }
 
 /* Header */
 header {
-    background: #000000;
+    background: #000;
     padding: 20px;
     border-bottom: 3px solid #dc3545;
-    position: relative; /* necesario para posicionar redes */
-    text-align: center; /* centra el logo */
+    position: relative;
+    text-align: center;
 }
 
-/* Logo centrado */
+/* Logo */
 header .logo img {
     height: 150px;
     width: auto;
@@ -24,10 +24,10 @@ header .logo img {
     margin: 0 auto;
 }
 
-/* Redes sociales arriba a la derecha */
+/* Redes sociales */
 header .redes {
     position: absolute;
-    top: 50%; /* alineado verticalmente al centro */
+    top: 50%;
     right: 50px;
     transform: translateY(-50%);
     display: flex;
@@ -44,53 +44,47 @@ header .redes a:hover {
     color: #dc3545;
 }
 
-/* Contenedor del botón */
-.pedido-container {
-    text-align: right; /* botón a la derecha */
-    margin: 20px 30px;
-}
-
-/* BOTÓN estilizado (sin animación constante) */
-.pedido-container .subtitulo {
-    font-size: 16px;           /* MÁS CHICO */
-    font-weight: bold;
-    color: #fff;
-    background: linear-gradient(90deg, #dc3545, #ff4f4f);
-    padding: 8px 18px;          /* MÁS CHICO */
-    border-radius: 10px;
-    display: inline-flex;
+/* ===================== */
+/*   MENÚ PRINCIPAL      */
+/* ===================== */
+.menu-links {
+    display: flex;
+    justify-content: center;    /* 🔥 CENTRA LOS BOTONES */
+    gap: 15px;
     align-items: center;
-    gap: 6px;                   /* icono más cerca */
+    margin: 20px 0;
+}
+
+.menu-btn,
+.pedido-btn {
+    background: #dc3545;
+    padding: 12px 20px;
+    border-radius: 7px;
+    color: white;
+    font-weight: bold;
     text-decoration: none;
-    box-shadow: 0 4px 10px rgba(255,0,0,0.35);
-    transition: 0.25s ease-in-out;   /* mantiene hover suave */
-    /* animation removida */
+    font-size: 15px;
+    transition: 0.25s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-/* Icono dentro del botón */
-.pedido-container .subtitulo::before {
-    content: "💳"; 
-    font-size: 20px;   /* un poco más chico */
+.menu-btn:hover,
+.pedido-btn:hover {
+    background: #b02a37;
+    transform: scale(1.08);
 }
 
-/* Hover */
-.pedido-container .subtitulo:hover {
-    background: linear-gradient(90deg, #b02a37, #e03a3a);
-    transform: translateY(-2px) scale(1.05); /* efecto elegante al pasar mouse */
-    box-shadow: 0 6px 14px rgba(255,0,0,0.45);
+/* Ícono para el botón rojo */
+.pedido-btn::before {
+    content: "💳";
+    font-size: 18px;
 }
 
-/* Mobile: mantener a la derecha */
-@media (max-width: 600px) {
-    .pedido-container {
-        text-align: right;
-        margin-right: 15px;
-    }
-}
-
-
-
-/* Catálogo */
+/* ===================== */
+/*        CATÁLOGO       */
+/* ===================== */
 section#catalogo {
     padding: 20px;
 }
@@ -99,13 +93,12 @@ table {
     width: 95%;
     margin: 20px auto;
     border-collapse: collapse;
-    background: #fff;  /* tabla en blanco */
+    background: #fff;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
-/* Encabezados */
 th {
     background: #dc3545;
     color: white;
@@ -115,28 +108,25 @@ th {
     font-size: 14px;
 }
 
-/* Filas */
 td {
     padding: 12px;
     text-align: center;
     font-size: 14px;
     font-weight: bold;
-    color: #333; /* texto oscuro porque la tabla es blanca */
+    color: #333;
 }
 
-/* Filas pares */
 tr:nth-child(even) {
     background: #d4edda;
 }
 
-/* Hover */
 tr:hover {
     background: #28a745;
     color: #fff;
     cursor: pointer;
 }
 
-/* Botón WhatsApp flotante */
+/* WhatsApp flotante */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -180,10 +170,10 @@ footer a:hover {
 }
 
 footer .aviso {
-    font-size: 16px;        /* más grande */
-    color: #ffcc00;         /* amarillo fuerte */
-    font-weight: bold;      /* en negrita */
-    text-transform: uppercase; /* mayúsculas */
+    font-size: 16px;
+    color: #ffcc00;
+    font-weight: bold;
+    text-transform: uppercase;
     margin-bottom: 15px;
     line-height: 1.6;
     max-width: 90%;
@@ -191,8 +181,7 @@ footer .aviso {
     margin-right: auto;
 }
 
-/* ---------------- PAGINACIÓN ---------------- */
-
+/* Paginación */
 .paginacion {
     text-align: center;
     margin: 25px 0;
@@ -202,24 +191,99 @@ footer .aviso {
     display: inline-block;
     padding: 10px 16px;
     margin: 0 5px;
-    background-color: #d32f2f; /* ROJO */
+    background-color: #d32f2f;
     color: #fff;
     font-weight: bold;
     text-decoration: none;
     border-radius: 6px;
-    transition: all 0.25s ease;
-    cursor: pointer;
+    transition: 0.25s ease;
 }
 
-/* Animación hover */
 .pagina-btn:hover {
-    background-color: #b71c1c; /* Rojo más oscuro */
-    transform: scale(1.12);   /* Hace zoom sutil */
+    background-color: #b71c1c;
+    transform: scale(1.12);
 }
 
-/* Página activa */
 .pagina-activa {
-    background-color: #4CAF50 !important; /* Verde */
+    background-color: #4CAF50 !important;
     cursor: default;
     transform: scale(1.15);
+}
+
+/* ================= BANNERS GIF ================= */
+
+.banner-container {
+    display: flex;
+    justify-content: center;   /* centra horizontalmente */
+    align-items: center;
+    gap: 10px;                 /* espacio entre banners */
+    margin: 20px 0;
+    flex-wrap: wrap;           /* permite mantenerlos lado a lado */
+}
+
+.banner-gif {
+    width: 45%;                /* tamaño adaptable */
+    max-width: 500px;
+    min-width: 150px;          /* evita que se hagan demasiado chicos */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); /* glow rojo suave */
+}
+/* ---- SECCIONES TIPO FORO ---- */
+
+.foro-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.foro-item {
+    display: flex;
+    align-items: center;
+    background: #111;
+    border: 2px solid #292929;
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.25s ease-in-out;
+}
+
+.foro-item:hover {
+    background: #1c1c1c;
+    border-color: #dc3545;
+    transform: scale(1.02);
+}
+
+.foro-icon {
+    font-size: 45px;
+    margin-right: 20px;
+    color: #dc3545;
+}
+
+.foro-texto h2 {
+    color: #fff;
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.foro-texto p {
+    color: #ccc;
+    margin: 5px 0 0 0;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .foro-item {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .foro-icon {
+        font-size: 40px;
+        margin-right: 15px;
+    }
 }

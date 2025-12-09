@@ -171,6 +171,33 @@ def catalogo():
                            pagina_actual=pagina,
                            total_paginas=total_paginas)
 
+# ----------------- NUEVAS SECCIONES ------------------
+
+@app.route("/categorias")
+def categorias():
+    return render_template("categorias.html")
+
+@app.route("/gratis")
+def gratis():
+    return render_template("gratis.html")
+
+# -------- SUB-SECCIONES DE CATEGORÍAS -------- #
+
+@app.route("/sistemas")
+def sistemas():
+    return render_template("sistemas.html")
+
+@app.route("/proxys")
+def proxys():
+    return render_template("proxys.html")
+
+@app.route("/cracking")
+def cracking():
+    return render_template("cracking.html")
+
+@app.route("/vpns")
+def vpns():
+    return render_template("vpns.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

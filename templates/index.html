@@ -1,38 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Catálogo</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <!-- FontAwesome para iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+{% extends "base.html" %}
 
-    <!-- Encabezado -->
-<header>
-    <div class="header-container">
-        <div class="logo">
-             <img src="{{ url_for('static', filename='img/logazo1.jpeg') }}" alt="logazo1">
-        </div>
-        <div class="redes">
-            <a href="https://www.facebook.com/profile.php?id=61579833297856" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/bovedamex?igsh=MTlzZXR4b2prZWJlMw==" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-    </div>
-</header>
+{% block contenido %}
 
-
-<div class="pedido-container">
-    <a href="https://wa.me/5491135683850?text=Hola, quiero hacer un pedido" 
-       target="_blank" 
-       class="subtitulo">
-       ¡MÁS TARJETAS AQUÍ!
-    </a>
-</div>
-
-
-    <!-- Catálogo -->
+<!-- Aquí dejás solo la tabla del catálogo -->
 <section id="catalogo">
     <table>
         <thead>
@@ -67,7 +37,7 @@
         </tbody>
     </table>
 
-    <!-- ================= PAGINACIÓN ================= -->
+    <!-- PAGINACIÓN -->
     <div class="paginacion">
         {% if pagina_actual > 1 %}
             <a class="pagina-btn" href="/?pagina={{ pagina_actual - 1 }}">« Anterior</a>
@@ -85,24 +55,7 @@
             <a class="pagina-btn" href="/?pagina={{ pagina_actual + 1 }}">Siguiente »</a>
         {% endif %}
     </div>
-    <!-- ============= FIN PAGINACIÓN ================= -->
 
 </section>
 
-<!-- Botón de WhatsApp flotante -->
-<a href="https://wa.me/5491135683850" target="_blank" class="whatsapp-float">
-    💬
-</a>
-
-<!-- Footer -->
-<footer>
-    <p class="aviso">
-        Todas estas tarjetas son una pequeña muestra del total de nuestro material en posesión. 
-        Para más información en cuanto la disponibilidad en tiempo real comunicarse a nuestro Whatsapp.
-    </p>
-    <p>© 2025 - Todos los derechos reservados</p>
-    <p>Contacto: <a href="mailto:bovedamx@gmail.com">bovedamx@gmail.com</a></p>
-</footer>
-
-</body>
-</html>
+{% endblock %}
