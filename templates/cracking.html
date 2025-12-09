@@ -2,8 +2,141 @@
 
 {% block content %}
 
-<h1 class="titulo-seccion">Guía de Cracking para Principiantes</h1>
+<!-- TÍTULO EXTREMO ESTILO PANEL -->
+<div class="section-header-premium">
+    <h1><span>🧠</span> GUÍA DE CRACKING PARA PRINCIPIANTES — APRENDE LO BÁSICO Y LA TERMINOLOGÍA</h1>
+</div>
 
-<p>Explicaciones básicas, términos importantes, tutoriales…</p>
+<!-- INTRODUCCIÓN -->
+<div class="text-section">
+    <p>
+        Esta guía está diseñada para que principiantes entiendan el funcionamiento básico del cracking,
+        sus pasos principales y la terminología esencial del mundo de la ciberseguridad ofensiva.
+        Si eres nuevo, sigue cada paso en orden y utiliza siempre un entorno seguro como
+        <strong>Sandboxie, RDP o máquinas virtuales</strong>.
+    </p>
+</div>
+
+<div class="text-separator"></div>
+
+<!-- PASOS -->
+<div class="text-section">
+    <h2 class="text-title">📘 PASO A PASO — CRACKING DESDE CERO</h2>
+
+    <h3 class="text-subtitle">1️⃣ Obtener palabras clave (“keywords”)</h3>
+    <p>
+        Primero necesitas palabras clave para hacer <strong>dorking</strong>.
+        Puedes usar scrapers de keywords (enlaces al final) o sitios como
+        <a href="https://keywordtool.io" target="_blank">keywordtool.io</a>.
+        <br>Ejemplo: si quieres cuentas de NordVPN, usa palabras clave relacionadas a NordVPN.
+    </p>
+
+    <h3 class="text-subtitle">2️⃣ Generar “dorks”</h3>
+    <p>
+        Usa tus keywords en un generador de dorks o créalos manualmente.
+        Los dorks son combinaciones que permiten localizar sitios vulnerables mediante motores de búsqueda.
+    </p>
+
+    <h3 class="text-subtitle">3️⃣ Buscar URLs con un Dork Searcher</h3>
+    <p>
+        En el buscador de dorks (enlace al final), activa la opción <strong>Anti-Público</strong>.
+        Puedes usar proxys gratuitos (Proxyscrape) o proxys HQ para mejores resultados.
+    </p>
+
+    <h3 class="text-subtitle">4️⃣ Usar SQLi Dumper para encontrar exploits</h3>
+    <p>
+        Estamos usando SQLi Dumper 8.5 (aunque la 8.3 funciona mejor). Importa todas las URLs
+        para descubrir sitios vulnerables a SQL Injection.
+    </p>
+
+    <h3 class="text-subtitle">5️⃣ Importar URLs</h3>
+    <p>
+        Dentro de SQLi Dumper, presiona “Importar” y carga tu archivo .txt con las URLs encontradas.
+    </p>
+
+    <h3 class="text-subtitle">6️⃣ Exploiter — Buscar URLs explotables</h3>
+    <p>
+        Ve a la sección <strong>Exploitables</strong> y pulsa “Iniciar Exploiter”.
+        Si hay sitios vulnerables, aparecerán automáticamente.
+    </p>
+
+    <h3 class="text-subtitle">7️⃣ Analyzer — Buscar URLs inyectables</h3>
+    <p>
+        En la sección <strong>Inyectables</strong>, ejecuta “Iniciar Analizador”.
+        Esto ubicará URLs que permiten inyección SQL.
+    </p>
+
+    <h3 class="text-subtitle">8️⃣ Buscar emails y contraseñas en la base</h3>
+    <p>
+        Selecciona todas las URLs detectadas y escribe <strong>email</strong> y <strong>password</strong>
+        en las columnas de búsqueda. Luego pulsa “Start”.
+    </p>
+
+    <h3 class="text-subtitle">9️⃣ Ir al Dumper</h3>
+    <p>
+        Haz clic derecho sobre una URL y selecciona “Ir a Dumper”.
+        Aquí podrás revisar bases completas.
+    </p>
+
+    <h3 class="text-subtitle">🔟 Exportar datos</h3>
+    <p>
+        Busca la tabla con usuarios y contraseñas, selecciona los datos y expórtalos.
+    </p>
+
+    <h3 class="text-subtitle">1️⃣1️⃣ Revisar las combolists obtenidas</h3>
+    <p>
+        Usa checkers como OpenBullet o configuraciones específicas (por ejemplo, NordVPN)
+        para verificar las credenciales obtenidas.
+    </p>
+
+    <p class="warning-text">
+        ⚠️ Nota: siempre ejecuta estas herramientas en entornos aislados como Sandboxie, RDP o máquinas virtuales.
+    </p>
+</div>
+
+<div class="text-separator"></div>
+
+<!-- TERMINOLOGÍA -->
+<div class="text-section">
+    <h2 class="text-title">📚 TERMINOLOGÍA BÁSICA</h2>
+
+    <div class="text-item"><i>🔑</i> <strong>Palabra clave:</strong> concepto base utilizado para generar dorks.</div>
+    <div class="text-item"><i>🧩</i> <strong>Dork:</strong> combinaciones avanzadas de búsqueda para encontrar sitios vulnerables.</div>
+    <div class="text-item"><i>🌐</i> <strong>URL:</strong> localizador uniforme de recursos (dirección web).</div>
+    <div class="text-item"><i>🛡️</i> <strong>Proxy:</strong> servidor que actúa como intermediario para anonimato y filtrado.</div>
+    <div class="text-item"><i>✔</i> <strong>Checker / Verificador:</strong> herramienta que prueba credenciales contra un servicio.</div>
+    <div class="text-item"><i>⚙️</i> <strong>Configuraciones:</strong> scripts utilizados por checkers para funcionar correctamente.</div>
+</div>
+
+<div class="text-separator"></div>
+
+<!-- HERRAMIENTAS -->
+<div class="text-section">
+    <h2 class="text-title">🧰 Herramientas recomendadas</h2>
+
+    <div class="text-item">
+        🔗 <a href="https://anonfiles.com/j64aiem9y0/Keyword_Scraper_by_xRisky_rar" target="_blank">
+            Scraper de Palabras Clave (Keyword Scraper)
+        </a>
+    </div>
+
+    <div class="text-item">
+        🔗 <a href="https://anonfiles.com/fbqfiam2y1/HQ_Dorks_Generator_By_CRYP70_rar" target="_blank">
+            TSP Dork Generator v8.0
+        </a>
+    </div>
+
+    <div class="text-item">
+        🔗 <a href="https://anonfiles.com/Rb60i1mcy9/Search_V3_rar" target="_blank">
+            Dork Searcher v3 — CRYP70
+        </a>
+    </div>
+
+    <div class="text-item">
+        🔗 <a href="https://anonfiles.com/PdA5TfM8n0/SQLi_Dumper_8.3_-_Musty_zip" target="_blank">
+            SQLi Dumper v8.3 (Optimizado)
+        </a>
+    </div>
+</div>
 
 {% endblock %}
