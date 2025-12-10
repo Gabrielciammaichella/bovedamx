@@ -2,58 +2,66 @@
 
 {% block content %}
 
-<section id="catalogo">
-    <table>
-        <thead>
-            <tr>
-                <th>Base</th>
-                <th>BIN</th>
-                <th>Exp Date</th>
-                <th>Seller</th>
-                <th>Bank</th>
-                <th>Price</th>
-                <th>Level</th>
-                <th>Class</th>
-                <th>Type</th>
-                <th>País</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for p in productos %}
-            <tr onclick="window.open('https://wa.me/5491135683850?text=Hola, me interesa el producto con BIN {{ p.bin }} ({{ p.bank }})', '_blank')">
-                <td>{{ p.base }}</td>
-                <td>{{ p.bin }}</td>
-                <td>{{ p.exp_date }}</td>
-                <td>{{ p.seller }}</td>
-                <td>{{ p.bank }}</td>
-                <td>{{ p.price }}</td>
-                <td>{{ p.level }}</td>
-                <td>{{ p.class }}</td>
-                <td>{{ p.type }}</td>
-                <td>{{ p.country }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+<div class="catalogo-wrapper">
 
-    <div class="paginacion">
-        {% if pagina_actual > 1 %}
-            <a class="pagina-btn" href="/?pagina={{ pagina_actual - 1 }}">« Anterior</a>
-        {% endif %}
+    <div class="catalogo-header">
+    <h1 class="titulo-catalogo">LISTA DE TARJETAS DISPONIBLES</h1>
+    <span class="sub">Actualizado — BóvedaMX</span>
+</div>
 
-        {% for p in range(1, total_paginas + 1) %}
-            {% if p == pagina_actual %}
-                <span class="pagina-btn pagina-activa">{{ p }}</span>
-            {% else %}
-                <a class="pagina-btn" href="/?pagina={{ p }}">{{ p }}</a>
+    <section id="catalogo">
+        <table>
+            <thead>
+                <tr>
+                    <th>Base</th>
+                    <th>BIN</th>
+                    <th>Exp Date</th>
+                    <th>Seller</th>
+                    <th>Bank</th>
+                    <th>Price</th>
+                    <th>Level</th>
+                    <th>Class</th>
+                    <th>Type</th>
+                    <th>País</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in productos %}
+                <tr onclick="window.open('https://wa.me/5491135683850?text=Hola, me interesa el producto con BIN {{ p.bin }} ({{ p.bank }})', '_blank')">
+                    <td>{{ p.base }}</td>
+                    <td>{{ p.bin }}</td>
+                    <td>{{ p.exp_date }}</td>
+                    <td>{{ p.seller }}</td>
+                    <td>{{ p.bank }}</td>
+                    <td>{{ p.price }}</td>
+                    <td>{{ p.level }}</td>
+                    <td>{{ p.class }}</td>
+                    <td>{{ p.type }}</td>
+                    <td>{{ p.country }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="paginacion">
+            {% if pagina_actual > 1 %}
+                <a class="pagina-btn" href="/?pagina={{ pagina_actual - 1 }}">« Anterior</a>
             {% endif %}
-        {% endfor %}
 
-        {% if pagina_actual < total_paginas %}
-            <a class="pagina-btn" href="/?pagina={{ pagina_actual + 1 }}">Siguiente »</a>
-        {% endif %}
-    </div>
+            {% for p in range(1, total_paginas + 1) %}
+                {% if p == pagina_actual %}
+                    <span class="pagina-btn pagina-activa">{{ p }}</span>
+                {% else %}
+                    <a class="pagina-btn" href="/?pagina={{ p }}">{{ p }}</a>
+                {% endif %}
+            {% endfor %}
 
-</section>
+            {% if pagina_actual < total_paginas %}
+                <a class="pagina-btn" href="/?pagina={{ pagina_actual + 1 }}">Siguiente »</a>
+            {% endif %}
+        </div>
+
+    </section>
+</div>
 
 {% endblock %}

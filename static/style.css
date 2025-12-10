@@ -610,3 +610,227 @@ footer .aviso {
     letter-spacing: 2px;
     margin-top: 0;
 }
+.logo img {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.08);
+}
+/* ==== TARJETA QUE CONTIENE EL CATÁLOGO ==== */
+.catalogo-wrapper {
+    width: 96%;
+    max-width: 1500px;
+    margin: 35px auto;
+    background: #0d0f10;
+    border: 1px solid #1b1e22;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.25);
+}
+
+/* Encabezado estilo Altenen Pro */
+.catalogo-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.catalogo-header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 6px rgba(255, 204, 0, 0.4);
+}
+
+.catalogo-header .sub {
+    font-size: 14px;
+    color: #bbbbbb;
+    opacity: 0.8;
+}
+.titulo-catalogo {
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+
+    /* Degradado plateado */
+    background: linear-gradient(90deg, #f2f2f2, #bfbfbf, #e6e6e6, #8c8c8c, #f5f5f5);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Glow */
+    text-shadow: 
+        0 0 6px rgba(255, 255, 255, 0.3),
+        0 0 12px rgba(255, 255, 255, 0.25);
+
+    /* Animación tipo reflejo/metálico */
+    animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* === CONTENEDOR === */
+.gratis-container {
+    width: 90%;
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+    background: #0b0c0e;
+    border: 1px solid #1f2227;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.6);
+}
+
+/* === TÍTULO METÁLICO PLATEADO (EFECTO ALTENEN) === */
+.gratis-titulo-metal {
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    /* ⭐ EFECTO METÁLICO */
+    background: linear-gradient(90deg, #d7d7d7, #ffffff, #c3c3c3, #e9e9e9, #b8b8b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* ⭐ BRILLO EXTERNO SUAVE */
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.6),
+        0 0 14px rgba(180,180,180,0.4);
+
+    /* ⭐ EFECTO BRILLO EN MOVIMIENTO (opcional) */
+    animation: shine 4s linear infinite;
+}
+
+/* Animación brillo tipo Altenen */
+@keyframes shine {
+    0%   { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+.gratis-texto {
+    font-size: 18px;
+    color: #cfcfcf;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+/* === BOTÓN WHATSAPP === */
+.gratis-btn {
+    display: inline-block;
+    background: #25d366;
+    padding: 15px 34px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    transition: 0.25s ease;
+    box-shadow: 0 0 10px rgba(37, 211, 102, 0.45);
+}
+
+.gratis-btn:hover {
+    background: #1ebe5b;
+    transform: scale(1.08);
+}
+/* ==== SECCIÓN GRATIS - ESTILO ALTENEN ==== */
+
+.gratis-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.gratis-titulo {
+    font-size: 32px;
+    font-weight: 800;
+    color: #d7d7d7;
+    text-shadow: 0 0 10px #ffffff, 0 0 25px #a0a0a0;
+    margin-bottom: 10px;
+}
+
+.gratis-subtitulo {
+    font-size: 18px;
+    color: #ababab;
+    margin-bottom: 25px;
+    text-shadow: 0 0 8px #5c5c5c;
+}
+
+/* --- Caja estilizada --- */
+.gratis-box {
+    background: rgba(20, 20, 20, 0.75);
+    border: 1px solid #ffffff30;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    max-height: 500px;
+    overflow-y: auto;
+
+    box-shadow:
+        0 0 12px #7a00ff80,
+        0 0 25px #ff004080,
+        inset 0 0 12px #ffffff25;
+
+    backdrop-filter: blur(6px);
+}
+
+/* Scroll suave */
+.gratis-box::-webkit-scrollbar {
+    width: 8px;
+}
+.gratis-box::-webkit-scrollbar-thumb {
+    background: #7d00ff;
+    border-radius: 4px;
+}
+
+/* ---- COLORES DE TEXTO ---- */
+.txt-rojo {
+    white-space: pre-wrap;
+    color: #ff3b3b;
+    text-shadow: 0 0 8px #ff000080;
+    margin-bottom: 20px;
+}
+
+.txt-violeta {
+    white-space: pre-wrap;
+    color: #bb5bff;
+    text-shadow: 0 0 10px #8f00ff80;
+    margin-bottom: 20px;
+}
+
+.txt-naranja {
+    white-space: pre-wrap;
+    color: #ff9d2f;
+    text-shadow: 0 0 10px #ff720080;
+    margin-bottom: 20px;
+}
+
+/* --- BOTÓN --- */
+.gratis-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: linear-gradient(90deg, #7d00ff, #ff006a);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 0 12px #ff008880, 0 0 22px #7d00ff80;
+    transition: 0.2s ease-in-out;
+}
+.gratis-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff009980, 0 0 35px #9d00ff80;
+}
